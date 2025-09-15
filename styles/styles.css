@@ -1,0 +1,53 @@
+/* --- 1) animate a box (transition) --- */
+.box {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background: #e0ecff;
+  border: 2px dashed #0b57d0;
+  transition: transform 300ms ease;
+}
+.box.is-active { transform: scale(1.15) rotate(5deg); }
+
+/* --- 2) flip card (transition) --- */
+.flip-card { 
+  width: 220px; 
+  height: 140px; 
+  perspective: 800px; 
+}
+.flip-card__inner {
+  position: relative;
+  width: 100%; 
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 600ms ease;
+}
+.flip-card.is-flipped .flip-card__inner { transform: rotateY(180deg); }
+
+.flip-card__face {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+.flip-card__face--front { background: red; }
+.flip-card__face--back  { background: blue; transform: rotateY(180deg); }
+
+/* --- 3) loading spinner --- */
+.spinner {
+  width: 36px; height: 36px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #0b57d0;
+  border-radius: 50%;
+  display: none;
+}
+.spinner.is-on { display: inline-block; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* --- 4) modal --- */
+.modal { border: none; padding: 0; }
+.modal::backdrop { background: rgba(0,0,0,.35); }
+.modal .modal__dialog { padding: 12px 14px; border: 1px solid #e5e7eb; border-radius: 10px; }
+.modal__title { margin: 0 0 6px; font-weight: 600; }
+.modal__actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; }

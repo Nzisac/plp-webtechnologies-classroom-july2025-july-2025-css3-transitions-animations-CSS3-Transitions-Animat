@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles/styles.css">
+
+<title>CSS Transitions & Animations</title>
+</head>
+
+<body>
+    <!-- Example 2: Animate a box -->
+<section class="card">
+<h2> 1) Animate a Box (click)</h2>
+<div id="box" class="box" aria-label="Animated box"></div>
+<div class="actions">
+<button id="btnAnimate">Animate Box</button>
+</div>
+</section>
+
+
+<!-- Example 2: Flip Card -->
+<section class="card">
+  <h2>2) Card Flip (click)</h2>
+
+  <div id="flipCard" class="flip-card" aria-label="Flip card">
+    <div class="flip-card__inner">
+      <div class="flip-card__face flip-card__face--front">Front</div>
+      <div class="flip-card__face flip-card__face--back">Back</div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="btnFlip">Flip / Unflip</button>
+  </div>
+</section>
+
+
+
+
+<!-- Example 3: Loading animation start/stop -->
+<section class="card">
+<h2>3) Loading Animation (start/stop)</h2>
+<div id="spinner" class="spinner" aria-hidden="true"></div>
+<div class="actions">
+<button id="btnStart">Start Loading</button>
+<button id="btnStop">Stop Loading</button>
+</div>
+</section>
+
+
+<!-- Example 4: Modal popup slide/fade -->
+<section class="card">
+<h2>4) Modal Popup (open/close)</h2>
+<button id="btnOpenModal">Open Modal</button>
+<dialog id="modal" class="modal">
+<form method="dialog" class="modal__dialog">
+<p class="modal__title">Hello! I'm a modal</p>
+<p>This modal slides in and fades out. Controlled by functions.</p>
+<menu class="modal__actions">
+<button id="btnCloseModal">Close</button>
+</menu>
+</form>
+</dialog>
+</section>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
